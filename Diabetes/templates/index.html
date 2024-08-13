@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask ML Model</title>
+</head>
+<body>
+    <div style="text-align:center;">
+        <h1>Diabetes Prediction</h1>
+        {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+<div class="form-group">
+        <label>Pregnancies</label>
+        <input type="text" name="Pregnancies"></div>
+<div class="form-group">
+        <label>Glucose</label>
+        <input type="text" name="Glucose"></div>
+<div class="form-group">
+        <label>BloodPressure</label>
+        <input type="text" name="BloodPressure"></div>
+<div class="form-group">
+        <label>SkinThickness</label>
+        <input type="text" name="SkinThickness"></div>
+<div class="form-group">
+        <label>Insulin</label>
+        <input type="text" name="Insulin"></div>
+<div class="form-group">
+        <label>BMI</label>
+        <input type="text" name="BMI"></div>
+<div class="form-group">
+        <label>DiabetesPedigreeFunction</label>
+        <input type="text" name="DiabetesPedigreeFunction"></div>
+<div class="form-group">
+        <label>Age</label>
+        <input type="text" name="Age"></div>
+
+            <input type="submit" value="Predict">
+        </form>
+        <h2>{{ prediction_text }}</h2>
+    </div>
+</body>
+</html>
