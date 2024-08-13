@@ -22,7 +22,7 @@ def predict_diabetes():
     Age=int(request.form.get('Age'))
 
     result = model.predict(np.array([Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age]).reshape(1,8))
-    if result[0] == 0:
+    if result[0] == 1:
         result = 'The person is diabetic'
     else:
         result = 'The person is not diabetic'
